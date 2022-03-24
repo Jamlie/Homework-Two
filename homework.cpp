@@ -56,7 +56,7 @@ void median(int medianArray[], int sizeOfMedianArray) {
 
 int main() {
 
-    int medianOddArray[] =  {10, 4, 7, 8}; 
+    int medianOddArray[] =  {100, 10, 20, 57, 2, 64, 83, 22, 71, 65, 64, 92}; 
     int size = sizeof(medianOddArray) / sizeof(medianOddArray[0]);
     median(medianOddArray, size);
 
