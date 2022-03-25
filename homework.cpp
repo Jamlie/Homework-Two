@@ -10,8 +10,8 @@ using namespace std;
 /**
  * @brief This function is used to copy an array into a new dynamic array.
  * 
- * @param newMedianArray The dynamic array that we need to copy in.
- * @param medianArray The array that needs to be copied into the dynamic array.
+ * @param toBeCopied An array to be copied.
+ * @param toCopyIn An array to be copied in.
  * @param size The size of the array.
  */
 void copy(int toBeCopied[], int toCopyIn[], int size) {
