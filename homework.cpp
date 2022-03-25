@@ -31,33 +31,34 @@ void copy(int toBeCopied[], int toCopyIn[], int size) {
  */
 void median(int medianArray[], int sizeOfMedianArray) {
 
-    int *newMedianArray = new int[sizeOfMedianArray];
-
-    copy(medianArray, newMedianArray, sizeOfMedianArray);
-
     int evenSize;
     int oddSize;
 
-
     if (sizeOfMedianArray % 2 == 0) {
-        sort(newMedianArray, newMedianArray + sizeOfMedianArray);
+        sort(medianArray, medianArray + sizeOfMedianArray);
         evenSize = (sizeOfMedianArray / 2);
 
-        cout << double(newMedianArray[evenSize - 1] + newMedianArray[evenSize]) / 2;
+        cout << double(medianArray[evenSize - 1] + medianArray[evenSize]) / 2;
     }
     else {
-        sort(newMedianArray, newMedianArray + sizeOfMedianArray);
+        sort(medianArray, medianArray + sizeOfMedianArray);
         oddSize = (sizeOfMedianArray / 2);
-        cout << double(newMedianArray[oddSize]);
+        cout << double(medianArray[oddSize]);
     }
-
-    delete[] newMedianArray;
 }
 
 int main() {
 
-    int medianOddArray[] =  {100, 10, 20, 57, 2, 64, 83, 22, 71, 65, 64, 92}; 
-    int size = sizeof(medianOddArray) / sizeof(medianOddArray[0]);
-    median(medianOddArray, size);
+    int medianArray[] =  {100, 10, 20, 57, 2, 64, 83, 22, 71, 65, 64, 92}; 
+    int size = sizeof(medianArray) / sizeof(medianArray[0]);
+
+
+    int *newMedianArray = new int[size];
+
+    copy(medianArray, newMedianArray, size);
+
+    median(newMedianArray, size);
+
+    delete[] newMedianArray;
 
 }
